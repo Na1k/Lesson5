@@ -69,11 +69,11 @@ jobs:
       - name: Download backend
         uses: actions/download-artifact@v2
         with:
-          name: backend-arti
-          path: backend-artifact
+          name: backend-artifact
+          path: distII
 
       - name: Download frontend
         uses: actions/download-artifact@v2
         with:
-          name: frontend-arti
-          path: frontend-artifact
+          name: frontend-artifact
+          path: distII
