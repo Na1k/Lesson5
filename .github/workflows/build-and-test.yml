@@ -57,3 +57,23 @@ jobs:
         with:
           name: backend-artifact
           path: dist
+  
+  download:
+    name: Download artifacts
+    runs-on: ubuntu-latest
+    needs: 
+      - backend
+      - frontend
+    
+    steps:
+      - name: Download backend
+        uses: actions/download-artifact@v2
+        with:
+          name: backend-arti
+          path: backend-artifact
+
+      - name: Download frontend
+        uses: actions/download-artifact@v2
+        with:
+          name: frontend-arti
+          path: frontend-artifact
