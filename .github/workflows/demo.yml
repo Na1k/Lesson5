@@ -20,7 +20,9 @@ jobs:
         run: node src/frontend/app.js
 
       - name: copy to dist
-        run: cp src/frontend/app.js dist
+        run: |
+        mkdir dist
+        cp src/frontend/app.js dist
 
       - name: node command dist
         run: node dist/app.js
